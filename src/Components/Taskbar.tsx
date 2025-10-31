@@ -1,4 +1,8 @@
+import useTime from "../hooks/useTime"
+
 const Taskbar = () => {
+    const time = useTime()
+    
     return (
         <footer className="fixed bg-linear-to-b inset-shadow-sm inset-shadow-blue-300 from-blue-500 via-blue-600 to-blue-800 bottom-0 left-0 right-0 h-12 flex text-white justify-between items-stretch">
             <div className="right">
@@ -16,7 +20,7 @@ const Taskbar = () => {
             </div>
             <div className="left">
                 <div className="bg-linear-to-b from-blue-400 via-blue-500 to-blue-400 min-w-32 flex items-center justify-center h-full rounded-tl-sm rounded-bl-sm  border-2 border-blue-400">
-                    <span>08:51 PM</span>
+                    <span>{time}</span>
                 </div>
             </div>
         </footer>

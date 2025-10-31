@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.zoom-in-window {
+    animation: zoomIn 150ms ease-in;
+}
