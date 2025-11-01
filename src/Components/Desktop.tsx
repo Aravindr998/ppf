@@ -132,12 +132,14 @@ const Desktop = () => {
               selected={item.key === selected}
               onDoubleClick={() => handleDoubleClick(item)}
               onButtonBlur={() => setSelected("")}
+              icon={item.icon}
             />
           </div>
         );
       })}
       {Object.keys(openFolders).map((item) => {
         const details = openFolders[item]
+        const Data = details.Data ? details.Data : () => <></>
         return (
           <Rnd
           key={item}
@@ -167,7 +169,9 @@ const Desktop = () => {
             dragHandleClassName="drag-handle"
             bounds={"parent"}
           >
-            <OpenFolder handleCloseFolder={() => handleCloseFolder(item)} folderName={details.label || ""} />
+            <OpenFolder handleCloseFolder={() => handleCloseFolder(item)} folderName={details.label || ""} type={details.type} >
+              <Data />
+            </OpenFolder>
           </Rnd>
         );
       })}

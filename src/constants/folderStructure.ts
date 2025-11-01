@@ -1,3 +1,5 @@
+import ContactMe from "../Components/ContactMe"
+
 export interface IFolderStructure {
     key: string,
     type: "folder",
@@ -8,16 +10,22 @@ export interface IFolderStructure {
     tempX?: number,
     tempY?: number,
     label: string,
+    icon?: Icon
     folderDetails: IFolderDetails
 }
 
+export type Icon = "default" | "explorer"
+
+export type OpenFolderType = "folder" | "explorer" 
+
 export interface IFolderDetails {
-    type: "folder",
+    type: OpenFolderType,
     x: number,
     y: number,
     width: number, 
     height: number
-    label?: string
+    label?: string,
+    Data?: React.FC
 }
 
 export const folderStructure: IFolderStructure[] = [
@@ -29,6 +37,7 @@ export const folderStructure: IFolderStructure[] = [
         y: 0,
         w: 1,
         h: 1,
+        icon: "default",
         folderDetails: {
             type: "folder",
             x: 100,
@@ -45,6 +54,7 @@ export const folderStructure: IFolderStructure[] = [
         y: 1,
         w: 1,
         h: 1,
+        icon: "default",
         folderDetails: {
             type: "folder",
             x: 150,
@@ -61,12 +71,14 @@ export const folderStructure: IFolderStructure[] = [
         y: 2,
         w: 1,
         h: 1,
+        icon: "explorer",
         folderDetails: {
-            type: "folder",
+            type: "explorer",
             x: 200,
             y: 200,
             width: 400,
-            height: 400
+            height: 400,
+            Data: ContactMe
         }
     },
     
