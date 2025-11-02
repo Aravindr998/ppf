@@ -72,6 +72,44 @@ const OpenFolder = ({ handleCloseFolder, folderName, children, type }: IOpenFold
                             }
                         </div>
                     </div>
+                    <div className="flex tab-bar">
+                        <div className="flex">
+                            <img src="/back.png" />
+                            <span>Back</span>
+                        </div>
+                        <div className="flex">
+                            <img src="/forward.png" />
+                        </div>
+                        <div className="flex">
+                            <img src="/file_close.png" />
+                        </div>
+                        <div className="flex">
+                            <img src="/refresh.png" />
+                        </div>
+                        <div className="flex">
+                            <img src="/home.png" />
+                        </div>
+                         <div className="flex">
+                            <img src="/search.png" />
+                            <span>Search</span>
+                        </div>
+                        <div className="flex">
+                            <img src="/favorites.png" />
+                            <span>Favorites</span>
+                        </div>
+                        <div className="flex">
+                            <img src="/backup.png" />
+                        </div>
+                        <div className="flex">
+                            <img src="/mail_open.png" />
+                        </div>
+                        <div className="flex">
+                            <img src="/fax.png" />
+                        </div>
+                        <div className="flex">
+                            <img src="/group.png" />
+                        </div>
+                    </div>
                     {children}
                 </div>
             </div>
