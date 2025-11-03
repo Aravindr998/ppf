@@ -11,7 +11,7 @@ const useTime = () => {
       const now = new Date();
       const hour = now.getHours();
       const minute = now.getMinutes();
-      const currentTime = `${hour > 12 ? hour - 12 : hour}:${minute} ${hour >= 12 ? "PM" : "AM"}`;
+      const currentTime = `${hour < 10 ? "0": ""}${hour > 12 ? hour - 12 : hour}:${minute < 10 ? "0": ""}${minute} ${hour >= 12 ? "PM" : "AM"}`;
       setTime(currentTime);
     };
     setCurrentTime();

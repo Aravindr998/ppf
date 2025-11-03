@@ -12,3 +12,52 @@
 .zoom-in-window {
     animation: zoomIn 150ms ease-in;
 }
+
+.tab-bar div {
+    display: flex;
+    align-items: center;
+}
+
+.tab-bar img {
+    width: 32px;
+    max-width: 32px;
+}
+
+.tab-bar > div:has(span) > img {
+    width: 28px;
+    max-width: 32px;
+}
+
+.tab-bar > div:has(span) {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tab-bar {
+    background-color: rgb(239, 237, 226);
+    padding: 0.5rem 0.25rem;
+}
+
+.tab-bar span {
+    font-size: small;
+    color: #535353;
+}
+
+.vertical-divider {
+   background: #dcdcdc;
+   width: 2px;
+   min-width: 2px;
+   box-shadow:
+    inset 2px 2px 4px rgba(0, 0, 0, 0.3),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.8)
+}
+
+.tab-bar div:not(.vertical-divider) {
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.tab-bar div:hover {
+    background: linear-gradient(to bottom, rgb(221, 221, 249), rgb(160, 160, 201), rgb(221, 221, 249));
+}

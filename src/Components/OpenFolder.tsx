@@ -25,7 +25,7 @@ const OpenFolder = ({ handleCloseFolder, folderName, children, type }: IOpenFold
             <div className="bg-transparent w-full px-2 pb-2" style={{
                 height: "calc(100% - 52px)"
             }}>
-                <div className="bg-white w-full h-full rounded">
+                <div className="bg-white w-full h-full rounded overflow-scroll">
                     <div>
                         <div className="flex gap-2 text-sm">
                             {
@@ -72,41 +72,44 @@ const OpenFolder = ({ handleCloseFolder, folderName, children, type }: IOpenFold
                             }
                         </div>
                     </div>
-                    <div className="flex tab-bar">
-                        <div className="flex">
+                    <div className="flex tab-bar min-w-[505px] gap-2">
+                        <div>
                             <img src="/back.png" />
                             <span>Back</span>
                         </div>
-                        <div className="flex">
+                        <div>
                             <img src="/forward.png" />
                         </div>
-                        <div className="flex">
+                        <div className="vertical-divider"></div>
+                        <div>
                             <img src="/file_close.png" />
                         </div>
-                        <div className="flex">
+                        <div>
                             <img src="/refresh.png" />
                         </div>
-                        <div className="flex">
+                        <div>
                             <img src="/home.png" />
                         </div>
-                         <div className="flex">
+                        <div className="vertical-divider"></div>
+                         <div>
                             <img src="/search.png" />
                             <span>Search</span>
                         </div>
-                        <div className="flex">
+                        <div>
                             <img src="/favorites.png" />
                             <span>Favorites</span>
                         </div>
-                        <div className="flex">
+                        <div className="vertical-divider"></div>
+                        <div>
                             <img src="/backup.png" />
                         </div>
-                        <div className="flex">
+                        <div>
                             <img src="/mail_open.png" />
                         </div>
-                        <div className="flex">
+                        <div>
                             <img src="/fax.png" />
                         </div>
-                        <div className="flex">
+                        <div>
                             <img src="/group.png" />
                         </div>
                     </div>
